@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class LetterFrequency {
 
     public static void main(String[] args) {
+        System.out.print("Enter line of text to count the alphabets frequency: ");
         Scanner input = new Scanner(System.in);
         String text = input.nextLine();
         int[] alphabets = new int[26];

@@ -17,11 +17,11 @@ public class TestSerialization {
         person.setAge(20);
         person.setNotSerializedVariable("Not serialized data");
         //open the stream where the data will be put
-        try(FileOutputStream fileOutputStream = new FileOutputStream("SerializableFile.txt");
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)){
+        try (FileOutputStream fileOutputStream = new FileOutputStream("SerializableFile.txt");
+             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
             objectOutputStream.writeObject(person);
             System.out.println("Object is successfully serialized");
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
 

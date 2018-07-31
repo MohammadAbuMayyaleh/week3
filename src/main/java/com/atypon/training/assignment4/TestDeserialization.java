@@ -10,12 +10,12 @@ import java.io.ObjectInputStream;
 public class TestDeserialization {
 
     public static void main(String[] args) {
-        Person person ;
-        try(FileInputStream fileInputStream = new FileInputStream("SerializableFile.txt");
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)){
+        Person person;
+        try (FileInputStream fileInputStream = new FileInputStream("SerializableFile.txt");
+             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
             person = (Person) objectInputStream.readObject();
             System.out.println(person);
-        }catch (IOException  | ClassNotFoundException e){
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
